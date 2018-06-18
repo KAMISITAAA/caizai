@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="Style.css">
+
+<form action="Base/db.php" method="POST">
+  <h1>Iniciar sesión</h1>
+  <div class="inset">
+  <p>
+        <label for="name">USUARIO</label>
+        <input name="usuario" type="text" id="name" />
+  </p>
+  <p>
+    <label for="password">CONTRASEÑA</label>
+    <input name="contraseña" type="password" name="password" id="password">
+  </p>
+  <p>
+    <input type="checkbox" name="remember" id="remember">
+    <label for="remember">Recordar contraseña</label>
+  </p>
+  </div>
+  <p class="p-container">
+    <span>Se te olvidó tu contraseña ?</span>
+    <input type="submit" name="go" id="go" value="Log in">
+  </p>
+</form>

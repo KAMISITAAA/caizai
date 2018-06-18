@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Moda en paris</title>
+		<meta name="description" content="Responsive Retina-Friendly Menu with different, size-dependent layouts" />
+		<meta name="keywords" content="responsive menu, retina-ready, icon font, media queries, css3, transition, mobile" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">	
+			<!-- Codrops top bar -->
+			<div class="codrops-top clearfix">
+				<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/PageTransitions/"><span>Previous Demo</span></a>
+				<span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=14991"><span>Back to the Codrops Article</span></a></span>
+			</div>
+			<header>
+				<h1>Moda en paris<span>"A menudo, quienes alcanzan el éxito son los que ignoran que es posible fracasar”</span></h1>	
+			</header>
+			<div class="main clearfix">
+				<nav id="menu" class="nav">					
+					<center>
+					<ul>
+						<li>
+							<a href="#">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-home"></i>
+								</span>
+								<span>Home</span>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://www.google.com.ec/search?q=portafolio+de+moda+en+red&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiLiLeA-9vbAhWks1kKHcTICGsQ_AUICigB&biw=1304&bih=653">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-portfolio"></i>
+								</span>
+								<span>Portfolio</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.cutypaste.com/tag/paris/">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-blog"></i>
+								</span>
+								<span>Blog</span>
+							</a>
+						</li>
+						<li>
+							<a href="subscribete.html">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-team"></i>
+								</span>
+								<span>Subscribirse</span>
+							</a>
+						</li>
+						<li>
+							<a href="seccion.html">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-contact"></i>
+								</span>
+								<span>Iniciar Seccion</span>
+							</a>
+							
+						</li>
+					</ul>
+					<br>
+					<center><br><img src="img/paris moda.jpg">
+				</nav>
+			</div>
+			
+		</div><!-- /container -->
+		<script>
+			//  The function to change the class
+			var changeClass = function (r,className1,className2) {
+				var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+				if( regex.test(r.className) ) {
+					r.className = r.className.replace(regex,' '+className2+' ');
+			    }
+			    else{
+					r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+			    }
+			    return r.className;
+			};	
+
+			//  Creating our button in JS for smaller screens
+			var menuElements = document.getElementById('menu');
+			menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>');
+
+			//  Toggle the class on click to show / hide the menu
+			document.getElementById('menutoggle').onclick = function() {
+				changeClass(this, 'navtoogle active', 'navtoogle');
+			}
+
+			// http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+			document.onclick = function(e) {
+				var mobileButton = document.getElementById('menutoggle'),
+					buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+				if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+					changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+				}
+			}
+		</script>
+		Moda de París o en inglés conocida como Paris Fashion Week es una feria de ropa celebrada cada dos años en París, Francia, con eventos de primavera/verano y otoño/invierno que se celebra cada año. Las fechas son determinadas por la Federación Francesa de Moda. Actualmente, la Semana de la moda se celebra en el Carrousel du Louvre, así como en varios otros lugares en toda la ciudad.
+
+La Semana de la Moda de París forma parte de las cuatro grandes semanas de la moda mundiales, siendo los otros la Semana de la Moda de Londres, Semana de la Moda de Milán, y la Semana de la Moda de Nueva York.1​2​ El calendario comienza con Nueva York, seguido de Londres, y luego en Milán y termina en París.
+
+En 2013, la Semana de la Moda de París (primavera/verano) comenzó el 26 de septiembre con Lucien Pellat Finet, y fue seguido por programas de las principales casas de moda como Guy Laroche, Dries Van Noten, Comme des Garçons, Christian Dior, Lanvin, Isabel Marant, Sonia Rykiel, Jean Paul Gaultier, Balenciaga, y más. Estos desfiles se celebran para mostrar las industrias de la moda y las
+ distintas etiquetas que estarán lanzando y para aumentar las ventas de las marcas.3​
+	</body>
+</html>
